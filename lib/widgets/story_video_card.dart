@@ -2,9 +2,9 @@ import 'package:contenter/style/colors.dart';
 import 'package:contenter/widgets/submit_button.dart';
 import 'package:flutter/material.dart';
 
-class StroryVideoCard extends StatelessWidget {
+class StoryVideoCard extends StatelessWidget {
   final bool isButtontrue;
-  const StroryVideoCard({
+  const StoryVideoCard({
     super.key,
     this.isButtontrue = false,
   });
