@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const blue = Color(0xFF3C04E4);
+const lightviolet = Color(0xFFA592DF);
 const violet = Color(0xFF907CF4);
 const yellow = Color(0xFFE7F336);
 const pink = Color(0xFFEC54F4);
@@ -21,4 +22,15 @@ const positive = Color(0xFF0ABE31);
 
 const background = Color(0xFFF5F5F5);
 
-const colorScheme = ColorScheme(brightness: Brightness.light, background: background, primary: blue, onPrimary: light, secondary: gray04, onSecondary: blue, error: negative, onError: black, onBackground: black, surface: gray03, onSurface: black);
+const colorScheme = ColorScheme(
+    brightness: Brightness.light,
+    background: background,
+    primary: blue,
+    onPrimary: light,
+    secondary: gray04,
+    onSecondary: blue,
+    error: negative,
+    onError: black,
+    onBackground: black,
+    surface: gray03,
+    onSurface: black);

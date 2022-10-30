@@ -137,6 +137,7 @@ class UploadContent extends StatelessWidget {
           height: 20,
         ),
         SubmitButton(
+          textColor: gray04,
           onTap: () {
             print("=====SUBMIT====");
           },

@@ -1,4 +1,3 @@
-import 'package:contenter/data_structs/profile.dart';
 import 'package:contenter/main.dart';
 import 'package:contenter/style/colors.dart';
 import 'package:contenter/style/fonts.dart';
@@ -15,16 +14,6 @@ class TakePartPage extends StatefulWidget {
 }
 
 class _TakePartPageState extends State<TakePartPage> {
-  final profile = ProfileData();
-
-  int _selectedTab = 0;
-
-  void _changeTab(int index) {
-    setState(() {
-      _selectedTab = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

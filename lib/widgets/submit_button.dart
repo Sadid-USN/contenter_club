@@ -4,7 +4,16 @@ import 'package:google_fonts/google_fonts.dart';
 
 class SubmitButton extends StatelessWidget {
   final VoidCallback onTap;
-  const SubmitButton({Key? key, required this.onTap}) : super(key: key);
+  final Color color;
+  final Color textColor;
+  final String text;
+  const SubmitButton({
+    Key? key,
+    required this.onTap,
+    this.color = blue,
+    this.textColor = gray04,
+    this.text = 'Submit',
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -15,13 +24,13 @@ class SubmitButton extends StatelessWidget {
         height: 55,
         width: MediaQuery.of(context).size.width,
         decoration:
-            BoxDecoration(color: blue, borderRadius: BorderRadius.circular(8)),
+            BoxDecoration(color: color, borderRadius: BorderRadius.circular(8)),
         padding: const EdgeInsets.all(8.0),
         child: Text(
-          'Submit',
+          text,
           textAlign: TextAlign.center,
           style: GoogleFonts.openSans(
-            textStyle: const TextStyle(fontSize: 14, color: gray04),
+            textStyle: TextStyle(fontSize: 14, color: textColor),
           ),
         ),
       ),

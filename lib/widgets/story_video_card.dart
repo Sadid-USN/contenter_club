@@ -1,9 +1,12 @@
 import 'package:contenter/style/colors.dart';
+import 'package:contenter/widgets/submit_button.dart';
 import 'package:flutter/material.dart';
 
 class StroryVideoCard extends StatelessWidget {
+  final bool isButtontrue;
   const StroryVideoCard({
     super.key,
+    this.isButtontrue = false,
   });
 
   @override
@@ -49,6 +52,19 @@ class StroryVideoCard extends StatelessWidget {
             'To make a video of backstage of making a coffee.',
             style: Theme.of(context).textTheme.titleSmall,
           ),
+          const SizedBox(
+            height: 20,
+          ),
+          isButtontrue
+              ? SubmitButton(
+                  textColor: lightviolet,
+                  text: 'Take a part',
+                  color: gray03,
+                  onTap: () {},
+                )
+              : const SizedBox(
+                  height: 20,
+                ),
         ],
       ),
     );

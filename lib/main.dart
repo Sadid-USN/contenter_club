@@ -1,3 +1,4 @@
+import 'package:contenter/pages/early_bird_page.dart';
 import 'package:contenter/pages/paid_request_page.dart';
 import 'package:contenter/pages/take_part_page.dart';
 import 'package:contenter/widgets/my_proposals.dart';
@@ -153,6 +154,14 @@ class NavigationPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return const PaidRequestPage();
+                  }));
+                },
+              ),
+              TextButton(
+                child: const Text('EarlyBird'),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const EarlyBirdPage();
                   }));
                 },
               ),
