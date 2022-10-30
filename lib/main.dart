@@ -1,3 +1,4 @@
+import 'package:contenter/pages/paid_request_page.dart';
 import 'package:contenter/pages/take_part_page.dart';
 import 'package:contenter/widgets/my_proposals.dart';
 import 'package:flutter/material.dart';
@@ -144,6 +145,14 @@ class NavigationPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return const TakePartPage();
+                  }));
+                },
+              ),
+              TextButton(
+                child: const Text('PaidRequest'),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const PaidRequestPage();
                   }));
                 },
               ),

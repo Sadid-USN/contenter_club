@@ -43,7 +43,12 @@ class _TakePartPageState extends State<TakePartPage> {
                 Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return const NavigationPage();
+                        }));
+                      },
                       icon: const Icon(
                         Icons.arrow_back_ios,
                         size: 25,
