@@ -150,7 +150,7 @@ class NavigationPage extends StatelessWidget {
                 },
               ),
               TextButton(
-                child: const Text('PaidRequest'),
+                child: const Text('Paid Request'),
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return const PaidRequestPage();
@@ -158,7 +158,7 @@ class NavigationPage extends StatelessWidget {
                 },
               ),
               TextButton(
-                child: const Text('EarlyBird'),
+                child: const Text('Early Bird'),
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return const EarlyBirdPage();
