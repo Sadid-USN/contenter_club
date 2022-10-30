@@ -12,7 +12,9 @@ class UploadContent extends StatelessWidget {
         Row(
           children: [
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                print("=====Real.mp4====");
+              },
               child: Container(
                 height: 55,
                 width: MediaQuery.of(context).size.width / 2 * 1.5,
@@ -46,7 +48,9 @@ class UploadContent extends StatelessWidget {
                   color: gray04, borderRadius: BorderRadius.circular(8)),
               padding: const EdgeInsets.all(8.0),
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  print("=====Object removed====");
+                },
                 icon: Image.asset('assets/icons/delete.png'),
               ),
             ),
@@ -56,7 +60,9 @@ class UploadContent extends StatelessWidget {
           height: 10,
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            print("=====Object Uploaded====");
+          },
           child: Container(
             alignment: Alignment.center,
             margin: const EdgeInsets.only(right: 2),
@@ -131,7 +137,9 @@ class UploadContent extends StatelessWidget {
           height: 20,
         ),
         SubmitButton(
-          onTap: () {},
+          onTap: () {
+            print("=====SUBMIT====");
+          },
         ),
       ],
     );

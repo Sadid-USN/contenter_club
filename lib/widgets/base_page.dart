@@ -4,6 +4,7 @@ import '../style/colors.dart' as style_colors;
 
 import '../data_structs/profile.dart';
 
+import '../widgets/header.dart';
 import '../widgets/footer.dart';
 import '../widgets/profile_brief.dart';
 
@@ -23,7 +24,7 @@ class BasePageWidget extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                // const HeaderWidget(),
+                const HeaderWidget(),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsets.all(20),
