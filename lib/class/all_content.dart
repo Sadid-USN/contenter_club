@@ -2,32 +2,50 @@ import 'package:contenter/style/colors.dart';
 import 'package:flutter/material.dart';
 
 class AllContetn {
-  String all;
-  int number;
-  List<MyIcon> icons;
-  Divider line;
-  AllContetn(
-      {required this.all,
-      required this.icons,
-      required this.line,
-      required this.number});
+  String galery;
+  String vido;
+  String photo;
+  Container line;
+  String cmaera;
+
+  AllContetn({
+    required this.galery,
+    required this.cmaera,
+    required this.vido,
+    required this.photo,
+    required this.line,
+  });
 }
 
 List<AllContetn> allContent = [
   AllContetn(
-      all: 'All', icons: icons, line: const Divider(color: gray02), number: 6),
-];
-
-class MyIcon {
-  Image icon;
-  MyIcon({required this.icon});
-}
-
-List<MyIcon> icons = [
-  MyIcon(
-    icon: Image.asset('assets/icons/camera.png'),
+    cmaera: 'assets/icons/camera.png',
+    galery: 'assets/icons/galery.png',
+    vido: 'Video',
+    photo: 'Photo',
+    line: Container(
+      height: 2,
+      color: gray01,
+    ),
   ),
-  MyIcon(
-    icon: Image.asset('assets/icons/galery.png'),
+  AllContetn(
+    cmaera: 'assets/icons/camera.png',
+    galery: 'assets/icons/galery.png',
+    vido: 'Video',
+    photo: 'Photo',
+    line: Container(
+      height: 2,
+      color: gray01,
+    ),
+  ),
+  AllContetn(
+    cmaera: 'assets/icons/camera.png',
+    galery: 'assets/icons/galery.png',
+    vido: 'Video',
+    photo: 'Photo',
+    line: Container(
+      height: 2,
+      color: gray01,
+    ),
   ),
 ];

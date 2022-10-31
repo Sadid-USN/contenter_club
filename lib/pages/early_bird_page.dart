@@ -67,143 +67,127 @@ class _EarlyBirdPageState extends State<EarlyBirdPage> {
 
                     SizedBox(
                       height: 50,
-                      child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: allContent.length,
-                          itemBuilder: (context, index) {
-                            return Row(
-                              children: [
-                                Column(
-                                  children: [
-                                    Container(
-                                      height: 45,
-                                      width: 80,
-                                      decoration: const BoxDecoration(
-                                        borderRadius: BorderRadius.only(
-                                            topLeft: Radius.circular(10),
-                                            topRight: Radius.circular(10)),
-                                        color:
-                                            Color.fromARGB(255, 213, 207, 241),
-                                      ),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            allContent[index].all,
-                                            style: GoogleFonts.openSans(
-                                              textStyle: const TextStyle(
-                                                  fontWeight: FontWeight.w600,
-                                                  fontSize: 16,
-                                                  color: blue),
-                                            ),
-                                          ),
-                                          const SizedBox(
-                                            width: 10,
-                                          ),
-                                          Container(
-                                            alignment: Alignment.center,
-                                            width: 30,
-                                            height: 35,
-                                            decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(5),
-                                              color: gray04,
-                                            ),
-                                            child: Text(
-                                              allContent[index]
-                                                  .number
-                                                  .toString(),
-                                              style: GoogleFonts.openSans(
-                                                textStyle: const TextStyle(
-                                                    fontWeight: FontWeight.w600,
-                                                    fontSize: 16,
-                                                    color: blue),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                height: 45,
+                                width: 80,
+                                decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(10),
+                                      topRight: Radius.circular(10)),
+                                  color: Color.fromARGB(255, 213, 207, 241),
                                 ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Row(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Image.asset('assets/icons/camera.png'),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
                                     Text(
-                                      'Video',
+                                      'All',
                                       style: GoogleFonts.openSans(
                                         textStyle: const TextStyle(
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 16,
-                                            color: gray01),
+                                            fontSize: 18,
+                                            color: blue),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    Container(
+                                      alignment: Alignment.center,
+                                      width: 30,
+                                      height: 35,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        color: gray04,
+                                      ),
+                                      child: Text(
+                                        '6',
+                                        style: GoogleFonts.openSans(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 16,
+                                              color: blue),
+                                        ),
                                       ),
                                     ),
                                   ],
-                                )
-                              ],
-                            );
-                          }),
+                                ),
+                              ),
+                              Container(
+                                width: 80,
+                                height: 2,
+                                color: violet,
+                              )
+                            ],
+                          ),
+                          Expanded(
+                            child: ListView.builder(
+                                scrollDirection: Axis.horizontal,
+                                itemCount: allContent.length,
+                                itemBuilder: (context, index) {
+                                  return Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 10, top: 10),
+                                        child: Row(
+                                          children: [
+                                            Image.asset(
+                                                allContent[index].cmaera),
+                                            const SizedBox(
+                                              width: 10,
+                                            ),
+                                            Text(allContent[index].vido,
+                                                style: GoogleFonts.openSans(
+                                                  textStyle: const TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                      fontSize: 16,
+                                                      color: gray01),
+                                                )),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 10),
+                                              child: Image.asset(
+                                                  allContent[index].galery),
+                                            ),
+                                            const SizedBox(
+                                              width: 10,
+                                            ),
+                                            Text(allContent[index].photo,
+                                                style: GoogleFonts.openSans(
+                                                  textStyle: const TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                      fontSize: 16,
+                                                      color: gray01),
+                                                )),
+                                          ],
+                                        ),
+                                      ),
+                                      // Container(
+                                      //   margin: const EdgeInsets.only(
+                                      //       top: 5, left: 10, right: 10),
+                                      //   width: 200,
+                                      //   height: 2,
+                                      //   color: gray01,
+                                      // )
+                                    ],
+                                  );
+                                }),
+                          ),
+                        ],
+                      ),
                     ),
 
-                    // Container(
-                    //   padding: const EdgeInsets.all(20),
-                    //   decoration: BoxDecoration(
-                    //     color: gray04,
-                    //     borderRadius: BorderRadius.circular(10),
-                    //   ),
-                    //   child: Column(
-                    //     children: [
-                    //       Row(
-                    //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //         children: [
-                    //           Row(
-                    //             children: [
-                    //               Image.asset('assets/icons/camera.png'),
-                    //               const SizedBox(
-                    //                 width: 8,
-                    //               ),
-                    //               Text(
-                    //                 'Story Video',
-                    //                 style: Theme.of(context).textTheme.titleMedium,
-                    //               ),
-                    //             ],
-                    //           ),
-                    //           Row(
-                    //             mainAxisAlignment: MainAxisAlignment.end,
-                    //             children: [
-                    //               Text(
-                    //                 '\$30',
-                    //                 style: Theme.of(context).textTheme.titleMedium,
-                    //               ),
-                    //             ],
-                    //           ),
-                    //         ],
-                    //       ),
-                    //       const SizedBox(
-                    //         height: 20,
-                    //       ),
-                    //       Text(
-                    //         'To make a video of backstage of making a coffee.',
-                    //         style: Theme.of(context).textTheme.titleSmall,
-                    //       ),
-                    //       const SizedBox(
-                    //         height: 20,
-                    //       ),
-                    //       SubmitButton(
-                    //         text: 'Take a part',
-                    //         color: gray03,
-                    //         onTap: () {},
-                    //       )
-                    //     ],
-                    //   ),
-                    // ),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     const StoryVideoCard(
                       isButtontrue: true,
                     ),
