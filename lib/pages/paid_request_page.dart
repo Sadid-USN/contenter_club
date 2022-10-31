@@ -126,7 +126,7 @@ class _PaidRequestPageState extends State<PaidRequestPage> {
                       child: SubmitButton(
                         text: 'Download materials',
                         onTap: () {
-                          print("=====SUBMIT====");
+                          print("=====Download materials====");
                         },
                       ),
                     ),
